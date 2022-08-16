@@ -1,0 +1,25 @@
+{
+  "name": "dlyapc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./public/css/style.css",
+    "dev": "npx tailwindcss -i ./src/input.css -o ./public/css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NazarH2ONyzhnyk/dlyapc.git"
+  },
+  "author": "Nazar Nyzhnyk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NazarH2ONyzhnyk/dlyapc/issues"
+  },
+  "homepage": "https://github.com/NazarH2ONyzhnyk/dlyapc#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
+  }
+}
