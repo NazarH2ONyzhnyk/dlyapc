@@ -1,9 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Noto+Sans:wght@300;400;500;600;700&family=Ubuntu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Noto+Sans:wght@300;400;500;600;700&family=Ubuntu:Ubuntu:wght@400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.fixed-header {
+        @apply fixed bg-white top-0 left-0 z-[60] shadow-xl;
+    }
+.header-margin {
+    @apply mt-[100px];
+}
 @layer base {
     .ubuntu {
         font-family: 'Ubuntu', sans-serif;
@@ -14,26 +20,221 @@
     .noto-sans {
         font-family: 'Noto Sans', sans-serif;
     }
+    h1, h2, h3, h4, h5, h6 {
+        @apply ubuntu;
+    }
+    p, button, a {
+        @apply noto-sans;
+    }
     .blue-gradient {
         @apply bg-gradient-to-r from-dlyapc-200 to-dlyapc-100;
     }
     .blue-text-gradient {
-        @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-blue-100;
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-dlyapc-200 to-dlyapc-100;
     }
     .links {
-        @apply px-4 h-[50px] cairo font-medium tracking-wide text-white flex items-center hover:bg-white hover:bg-opacity-30 duration-200 active:bg-white active:text-dlyapc-100;
+        @apply w-full blue-gradient flex items-center justify-center;
     }
-
+    .links a{
+        @apply px-2 md:px-4 h-[50px] cairo font-medium tracking-wide text-white flex items-center hover:bg-white hover:bg-opacity-30 duration-200 active:bg-white active:text-dlyapc-100;
+    }
+    .logo {
+        @apply w-[100px] h-[35px] xl:w-[130px] xl:h-[45px] flex items-center justify-center;
+    }
+    .logo svg {
+        @apply w-full;
+    }
     .category {
-        @apply border-2 border-dlyapc-100 px-[15px] py-[10px] flex items-center justify-between text-dlyapc-100 space-x-[15px]  bg-gradient-to-r hover:from-dlyapc-200 hover:to-dlyapc-100 hover:border-dlyapc-200 hover:text-white duration-200;
+        @apply hidden  border-2 border-dlyapc-100 px-[10px] py-[8px] lg:px-[15px] lg:py-[10px] md:flex items-center justify-between text-dlyapc-100 space-x-[12px] lg:space-x-[15px]  bg-gradient-to-r hover:from-dlyapc-200 hover:to-dlyapc-100 hover:border-dlyapc-200 hover:text-white duration-200;
     }
     .category:hover .arrow {
        transform: rotate(-90deg);
        transition: 400ms;
        color: white;
     }
+    .header {
+        @apply bg-white w-full;
+    }
+    
+    
+    .header-margin {
+        @apply w-full mt-0;
+    }
+    .header__search {
+        @apply hidden xl:flex items-center border-b-2 border-dlyapc-100;
+    }
+    .header__search input {
+        @apply w-64 pl-4 h-[42px] outline-none;
+    }
+    .header__search button {
+        @apply flex items-center justify-center space-x-[15px] px-5 h-[42px] text-dlyapc-100 hover:text-white bg-gradient-to-r hover:from-dlyapc-200 hover:to-dlyapc-100 duration-300;
+    }
 
     .sqrBtn {
         @apply h-[42px] border-b-2 border-white hover:text-dlyapc-100 hover:border-dlyapc-100 duration-200;
+    }
+    .burgerMenu {
+        @apply md:hidden space-y-1 py-4 px-2;
+    }
+    .burgerMenu span{
+        @apply block w-6 h-[3px] bg-dlyapc-500 rounded-sm;
+    }
+    .burgerMenu span:first-child{
+        @apply w-4 ml-auto;
+    }
+    .burgerMenu span:last-child{
+        @apply w-4 ml-auto;
+    }
+    .slider {
+        @apply relative w-full bg-white overflow-hidden; 
+    }
+    .bg-grid {
+        position: absolute;
+        z-index: 21;
+        width: 100%;
+        height: 100%;
+        background: url('../img/Grid-1.png');
+        /* background: rgba(255,255,255,.); */
+    }
+    /* .slider__img {
+        @apply w-full md:w-1/2 lg:w-auto;
+    } */
+    .slider__img {
+        @apply w-full h-[206px] md:w-[335px] md:h-[256px]  xl:w-[520px] xl:h-[380px] max-h-full max-w-full;
+    }
+    
+    .slider__img img{
+        @apply max-h-full h-full mx-auto md:mx-0 md:ml-auto;
+    }
+    .slider__control {
+        @apply p-1 text-xl font-bold hover:blue-text-gradient;
+    }
+    .slider__control__active {
+        @apply p-1 text-xl font-bold blue-text-gradient;
+    }
+    .slider__title {
+        @apply ubuntu text-2xl lg:text-3xl xl:text-4xl 2xl:text-[40px] 2xl:leading-[46px] font-bold;
+    }
+    .slider__description {
+        @apply noto-sans mt-3 xl:mt-4 text-base;
+    }
+    .slider__cta {
+        @apply px-[20px] lg:px-[50px] py-[10px] blue-gradient noto-sans xl:text-sm 2xl:text-base font-bold text-white hover:text-dlyapc-100 hover:from-transparent hover:to-transparent border-2 border-dlyapc-200 hover:border-dlyapc-100 duration-200;
+    }
+    .slider__secondary {
+        @apply flex items-center space-x-[10px] border-b-2 py-[10px] border-transparent hover:border-dlyapc-500 duration-200;
+    }
+    .slider__secondary p {
+        @apply font-medium noto-sans xl:text-sm 2xl:text-base;
+    }
+    .slider__blueText {
+        @apply flex items-center justify-between font-bold mt-[35px] lg:mt-[70px];
+    }
+    .slider__blueText {
+        @apply cairo blue-text-gradient text-base;
+    }
+    .partners {
+        @apply flex flex-col md:flex-row items-center justify-center py-10 md:space-x-10 text-dlyapc-400 border-t-2 border-b-2 border-dlyapc-100;
+    }
+    .partners:hover .partners__svg svg {
+        @apply text-dlyapc-100 duration-300;
+    }
+    .heading {
+        @apply mt-[50px];
+    }
+    .heading .pretitle {
+        @apply font-bold blue-text-gradient inline-block uppercase;
+    }
+    .heading .title {
+        @apply font-bold text-2xl md:text-3xl 2xl:text-4xl;
+    }
+    .configurations__cart {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 mt-10;
+    }
+    .cart {
+        @apply relative min-w-[250px] min-h-[347px] h-[347px] bg-white p-5 hover:shadow-2xl hover:z-40 duration-300;
+    }
+    .cart__img {
+        @apply h-[170px] flex items-center justify-center ;
+    }
+    .cart__img img {
+        @apply  max-h-full;
+    }
+    .cart__category {
+        @apply block hover:underline cairo text-sm font-bold blue-text-gradient;
+    }
+    .cart__name {
+        @apply block hover:underline ubuntu text-lg font-medium leading-[20px] mt-px h-[62px] text-clip;
+    }
+    .cart__info {
+        @apply flex justify-between items-center mt-3;
+    }
+    .cart__price {
+        @apply ubuntu font-bold;
+    }
+    .cart__sqr {
+        @apply p-2 hover:text-dlyapc-100;
+    }
+    .categories {
+        @apply grid lg:grid-cols-2 xl:grid-cols-3 mt-10;
+    }
+    .category__cart {
+        @apply w-full h-[210px] border border-t-0 lg:border-t border-dlyapc-100 flex items-center px-2 md:px-5 xl:py-0 2xl:py-6;
+    }
+    .category__cart:first-child {
+        @apply border-t;
+    }
+    .category__img {
+        @apply w-[90px] min-w-[90px] h-[80px] md:w-[150px] md:h-[150px] lg:min-w-[150px] lg:w-[150px] lg:h-[150px] xl:min-w-[100px] xl:w-[100px] xl:h-[100px] 2xl:min-w-[150px] 2xl:w-[150px] 2xl:h-[150px] flex items-center justify-center;
+    }
+    .category__img img{
+        @apply max-h-full;
+    }
+    .categoty__info {
+        @apply ml-4 md:ml-10 xl:ml-6 2xl:ml-10;
+    }
+    .category__name {
+        @apply text-xl md:text-[22px] md:leading-[24px] 2xl:text-2xl font-medium inline;
+    }
+    .category__ul {
+        @apply mt-2;
+    }
+    .category__links {
+        @apply xl:text-base 2xl:text-lg cairo hover:underline;
+    }
+    footer {
+        @apply relative w-full mt-10 overflow-hidden;
+    }
+    .footer__grid {
+        @apply grid grid-cols-1 gap-y-5 lg:grid-cols-2 lg:gap-5 xl:grid-cols-3 xl:gap-x-10 2xl:gap-x-20 mt-10 md:mt-0;
+    }
+    .footer__heading {
+        @apply cairo font-medium text-2xl inline;
+    }
+    .footer__ul {
+        @apply mt-2 cairo font-medium space-y-1 block;
+    }
+    .footer__li {
+        @apply block;
+    }
+    .footer__a {
+        @apply hover:underline inline-block;
+    }
+
+    /* Added for Product page */
+    .product__img {
+        @apply w-full h-[270px]
+    }    
+    .product__img img{
+        @apply max-h-full mx-auto
+    }    
+    .product__info {
+        @apply w-full
+    }
+    .product__name {
+        @apply text-xl font-bold 
+    }
+    .product__article {
+        @apply text-sm text-dlyapc-400 cairo;
     }
 }
