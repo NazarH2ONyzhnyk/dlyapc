@@ -133,12 +133,12 @@
             </div>
         </div>
     </header>
-    <div class="header-margin " id="headerMar"></div>
+    <div class="" id="headerMar"></div>
 
     <!-- Product -->
     <section class="product">
         <div class="container mx-auto px-[25px] md:px-[32px] xl:px-[64px]">
-            <div class="flex flex-col">
+            <div class="flex flex-col md:flex-row md:space-x-10 space-y-4 md:space-y-0">
                 <div class="product__img">
                     <img src="./img/videe-product.png" alt="">
                 </div>
@@ -152,11 +152,11 @@
                             <div class="flex items-end justify-between">
                                 <div class="">
                                     <p class="text-xl ubuntu  text-dlyapc-400">Ціна</p>
-                                    <p class="text-3xl font-bold ubuntu">29999 <span class="">грн</span></p>
+                                    <p class="text-2xl md:text-3xl font-bold ubuntu">29999 <span class="">грн</span></p>
                                 </div>
-                                <div class="space-y-2">
+                                <div class="xl:flex space-y-2 xl:space-y-0 xl:space-x-4">
                                     <button class="flex items-center space-x-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 lg:w-5 lg:h-5" viewBox="0 0 15 16" fill="none">
                                             <g clip-path="url(#clip0_629_2628)">
                                             <path d="M10.0625 2.5C8.975 2.5 7.93125 3.00625 7.25 3.80625C6.56875 3.00625 5.525 2.5 4.4375 2.5C2.5125 2.5 1 4.0125 1 5.9375C1 8.3 3.125 10.225 6.34375 13.15L7.25 13.9687L8.15625 13.1437C11.375 10.225 13.5 8.3 13.5 5.9375C13.5 4.0125 11.9875 2.5 10.0625 2.5ZM7.3125 12.2187L7.25 12.2812L7.1875 12.2187C4.2125 9.525 2.25 7.74375 2.25 5.9375C2.25 4.6875 3.1875 3.75 4.4375 3.75C5.4 3.75 6.3375 4.36875 6.66875 5.225C6.66875 5.225 6.75 5.625 7.25 5.625C7.75 5.625 7.8375 5.225 7.8375 5.225C8.1625 4.36875 9.1 3.75 10.0625 3.75C11.3125 3.75 12.25 4.6875 12.25 5.9375C12.25 7.74375 10.2875 9.525 7.3125 12.2187Z" fill="#272727"/>
                                             </g>
@@ -166,25 +166,121 @@
                                             </clipPath>
                                             </defs>
                                         </svg>
-                                        <p class="text-sm">до обраного</p>
+                                        <p class="text-sm lg:text-base">до обраного</p>
                                     </button>
                                     <button class="flex items-center space-x-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 lg:w-5 lg:h-5" viewBox="0 0 15 16" fill="none">
                                             <path d="M8.125 5.39375C8.65625 5.20625 9.08125 4.78125 9.26875 4.25H11.25L9.375 8.625C9.375 9.6625 10.3563 10.5 11.5625 10.5C12.7688 10.5 13.75 9.6625 13.75 8.625L11.875 4.25H13.125V3H9.26875C9.0125 2.26875 8.31875 1.75 7.5 1.75C6.68125 1.75 5.9875 2.26875 5.73125 3H1.875V4.25H3.125L1.25 8.625C1.25 9.6625 2.23125 10.5 3.4375 10.5C4.64375 10.5 5.625 9.6625 5.625 8.625L3.75 4.25H5.73125C5.91875 4.78125 6.34375 5.20625 6.875 5.39375V12.375H1.25V13.625H13.75V12.375H8.125V5.39375ZM12.7313 8.625H10.3938L11.5625 5.9L12.7313 8.625ZM4.60625 8.625H2.26875L3.4375 5.9L4.60625 8.625ZM7.5 4.25C7.15625 4.25 6.875 3.96875 6.875 3.625C6.875 3.28125 7.15625 3 7.5 3C7.84375 3 8.125 3.28125 8.125 3.625C8.125 3.96875 7.84375 4.25 7.5 4.25Z" fill="#272727"/>
                                         </svg>
-                                        <p class="text-sm">в порівняння</p>
+                                        <p class="text-sm lg:text-base">в порівняння</p>
                                     </button>
                                 </div>
                             </div>
-                            <button class="w-full mt-4 flex items-center justify-center py-[10px] blue-gradient space-x-2">
+                            <button class="product__buy">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="29" height="24" viewBox="0 0 29 24" fill="none">
-                                    <path d="M3.53027 3.09668H7.20628L8.32759 6.0444M8.32759 6.0444L11.9137 15.4715L20.5086 14.3592L23.2855 6.0444H8.32759Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M10.8155 20.1289C10.8155 20.5565 10.4856 20.9031 10.0786 20.9031C9.67169 20.9031 9.3418 20.5565 9.3418 20.1289C9.3418 19.7014 9.67169 19.3547 10.0786 19.3547C10.4856 19.3547 10.8155 19.7014 10.8155 20.1289Z" fill="white" stroke="white" stroke-width="2.5"/>
-                                    <path d="M20.3946 20.1289C20.3946 20.5565 20.0647 20.9031 19.6577 20.9031C19.2508 20.9031 18.9209 20.5565 18.9209 20.1289C18.9209 19.7013 19.2508 19.3547 19.6577 19.3547C20.0647 19.3547 20.3946 19.7013 20.3946 20.1289Z" fill="white" stroke="white" stroke-width="2.5"/>
+                                    <path d="M3.53027 3.09668H7.20628L8.32759 6.0444M8.32759 6.0444L11.9137 15.4715L20.5086 14.3592L23.2855 6.0444H8.32759Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10.8155 20.1289C10.8155 20.5565 10.4856 20.9031 10.0786 20.9031C9.67169 20.9031 9.3418 20.5565 9.3418 20.1289C9.3418 19.7014 9.67169 19.3547 10.0786 19.3547C10.4856 19.3547 10.8155 19.7014 10.8155 20.1289Z" fill="currentColor" stroke="currentColor" stroke-width="2.5"/>
+                                    <path d="M20.3946 20.1289C20.3946 20.5565 20.0647 20.9031 19.6577 20.9031C19.2508 20.9031 18.9209 20.5565 18.9209 20.1289C18.9209 19.7013 19.2508 19.3547 19.6577 19.3547C20.0647 19.3547 20.3946 19.7013 20.3946 20.1289Z" fill="currentColor" stroke="currentColor" stroke-width="2.5"/>
                                 </svg>
-                                <p class="text-dlyapc-300 text-xl font-semibold">Купити</p>
+                                <p class="text-xl font-semibold">Купити</p>
                             </button>
                         </div>
+                    </div>
+                    <div class="product__main">
+                        <p class="text-xl font-semibold">Основне</p>
+                        <div class="mt-3 space-y-1">
+                            <div class="flex">
+                                <div class="info__title">
+                                    <p>Бренд</p>
+                                </div>
+                                <div class="info__char">
+                                    <a href="#">MSI</a>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="info__title">
+                                    <p>Тип</p>
+                                </div>
+                                <div class="info__char">
+                                    <p>Відеокарта</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="info__title">
+                                    <p>Чіп</p>
+                                </div>
+                                <div class="info__char">
+                                    <a href="#">GeForce RTX 3060</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="block w-full h-1 blue-gradient mt-7"></div>
+
+    <!-- Product about -->
+    <section>
+        <div class="container mx-auto px-[25px] md:px-[32px] xl:px-[64px]">
+            <div class="flex flex-col md:flex-row">
+                <!-- Characteristics -->
+                <div class="w-full md:w-1/2">
+                    <div class="heading">
+                        <h3 class="pretitle">characteristics</h3>
+                        <h2 class="title">Характеристики</h2> 
+                    </div>
+                    <div class="product__char">
+                        <div class="space-y-1">
+                            <div class="flex">
+                                <div class="info__title">
+                                    <p>Бренд</p>
+                                </div>
+                                <div class="info__char">
+                                    <a href="#">MSI</a>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="info__title">
+                                    <p>Тип</p>
+                                </div>
+                                <div class="info__char">
+                                    <p>Відеокарта</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="info__title">
+                                    <p>Чіп</p>
+                                </div>
+                                <div class="info__char">
+                                    <a href="#">GeForce RTX 3060</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="product__show">
+                        <p>Показати більше</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M11 2.66667L11 11L2.66667 11M11 11L1 1L11 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Description -->
+                <div class="w-full md:w-1/2">
+                    <div class="heading">
+                        <h3 class="pretitle">DESCRIPTION</h3>
+                        <h2 class="title">Опис</h2> 
+                        <p class="product__desc">
+                            MSI GeForce RTX 3060 GAMING X TRIO 12G - відеокарта середнього рівня в лінійці компанії за 2020 рік. Вона створена для того, щоб справлятися з будь-якими іграми в дозволі 1080р на максимальних налаштуваннях графіки і радувати хорошою продуктивністю в робочих завданнях. MSI GeForce RTX 3060 GAMING X TRIO 12G комплектується графічними чіпами NVIDIA
+                        </p>
+                        <button class="product__show">
+                            <p>Показати більше</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path d="M11 2.66667L11 11L2.66667 11M11 11L1 1L11 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>

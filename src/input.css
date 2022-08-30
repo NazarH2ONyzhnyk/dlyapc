@@ -4,11 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .fixed-header {
         @apply fixed bg-white top-0 left-0 z-[60] shadow-xl;
     }
 .header-margin {
-    @apply mt-[100px];
+        margin-top: 100px;
 }
 @layer base {
     .ubuntu {
@@ -53,7 +54,7 @@
        color: white;
     }
     .header {
-        @apply bg-white w-full;
+        @apply bg-white w-full duration-200;
     }
     
     
@@ -222,19 +223,56 @@
     }
 
     /* Added for Product page */
+    .product {
+        @apply md:mt-5
+    }
     .product__img {
-        @apply w-full h-[270px]
+        @apply w-full h-[270px] md:h-[330px] lg:h-[440px] 2xl:h-[512px]
     }    
     .product__img img{
-        @apply max-h-full mx-auto
+        @apply max-h-full mx-auto md:mx-0
     }    
     .product__info {
         @apply w-full
     }
     .product__name {
-        @apply text-xl font-bold 
+        @apply text-xl md:text-2xl 2xl:text-3xl font-bold 
     }
     .product__article {
-        @apply text-sm text-dlyapc-400 cairo;
+        @apply text-sm md:text-base text-dlyapc-400 cairo;
+    }
+    .product__main {
+        @apply mt-6
+    }
+    .product__buy {
+        @apply w-full mt-4 flex items-center justify-center py-[10px] blue-gradient space-x-2 hover:text-dlyapc-100 text-white outline-none hover:from-white hover:to-white duration-200 border-2 border-dlyapc-200 hover:border-dlyapc-100;
+    }
+    .product__buy:hover {
+        box-shadow: 0px 10px 20px rgba(1, 118, 255, 0.25);
+    }
+    .product__buy:active {
+        box-shadow: none;
+        transition-duration: 100ms;
+    }
+    .info__title {
+        @apply w-1/2 cairo text-lg
+    }
+    .info__char {
+        @apply w-1/2 cairo text-lg
+    }
+    .info__char a {
+        @apply blue-text-gradient font-bold
+    }
+    .product__char {
+        @apply mt-3
+    }
+    .product__desc {
+        @apply mt-3 text-base md:text-lg ubuntu
+    }
+    .product__show {
+        @apply mt-2 flex items-center space-x-2 text-dlyapc-400 py-2 border-b-2 border-dlyapc-300 hover:border-dlyapc-400
+    }
+    .product__show p{
+        @apply cairo font-medium text-lg
     }
 }
